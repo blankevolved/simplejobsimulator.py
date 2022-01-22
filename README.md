@@ -1,2 +1,2 @@
-# Info
-Welcome this is the `simplejobsimulator.py` github page, where you get all your builds and updates for `simplejobsimulator.py`. Remember to check update logs below!!
+# `simplejobsimulator.py 0.0.1`
+First ever update in devolpment...
