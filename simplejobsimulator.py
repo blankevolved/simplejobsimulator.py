@@ -1,6 +1,7 @@
 import json
-from multiprocessing.connection import wait
 import time
+print("LOADING.....")
+time.sleep(10)
 def main():
     opendata = open('data/savegame.json')
     read = json.load(opendata)
@@ -18,21 +19,40 @@ def main():
             json.dump(null, outfile)
     else:
         coins = read["coins"]
-        version = "0.0.1"
+        version = "simplejobsimulator.py v0.0.1"
         def jobmenu():
+            print()
+            print(version)
+            print()
+            print("Coins: " + str(coins))
+            print()
             print("hello")
-            input()
-        print("LOADING.....")
-        time.sleep(10)
+            Input = input()
+        def upgrademenu():
+            print()
+            print(version)
+            print()
+            print("Coins: " + str(coins))
+            print()
+            print("Upgrades:")
+            print()
+            print("1. Upgrade 1")
+            print( "[Test Upgrade]")
+            Input = input()
         print()
-        print("simplejobsimulator v" + version)
+        print(version)
         print()
         print()
         print("Coins: " + str(coins))
         print()
         print("1. Job Menu")
-        mainInput = input()
-        if mainInput == "1":
+        print("2. Upgrade Menu")
+        Input = input()
+        if Input == "1":
             jobmenu()
+        if Input == "2":
+            upgrademenu()
+        else:
+            main()
 while True:
     main()
